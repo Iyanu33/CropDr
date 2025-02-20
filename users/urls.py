@@ -6,7 +6,7 @@ from django.contrib.auth.views import (
     PasswordChangeView,
     PasswordChangeDoneView
 )
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy,path,include
 
 from .views import signup, log_in, log_out, profile, edit_profile
 

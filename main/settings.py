@@ -37,12 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'soil_app.apps.Soil_appConfig',
-    'crop_app.apps.Crop_appConfig',
-    'api.apps.ApiConfig',
-    'users.apps.UsersConfig',
-    'weather.apps.WeatherConfig',
-    'core.apps.CoreConfig',
+    'soil',
+    'crop',
+    'api',
+    'users',
+    'weather',
+    'core',
     # 'donate',
 ]
 

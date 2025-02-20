@@ -1,23 +1,23 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm 
+from .models import User
 
-def SignupForm(UserCreationForm):
+class SignUpForm(UserCreationForm):
     """docstring for signup"""
-    Class meta:
+    class meta:
         models = User
         field = ("username","email")
 
-def LoginForm(forms.Form):
+class LoginForm(forms.Form):
     """docstring for LogInform"""
-    email = forms.Charfield()
-    password = forms.Charfield()
+    email = forms.CharField()
+    password = forms.CharField()
 
-
-def EditProfileForm(forms.Form):
+class EditProfileForm(forms.Form):
     """docstring for EditProfileForm"""
-    username = forms.Charfield()
-    about_me = forms.Charfield(widget = forms.Textarea())
-    my_image = forms.Imagefield(required=False)
+    username = forms.CharField()
+    about_me = forms.CharField(widget = forms.Textarea())
+    my_image = forms.ImageField(required=False)
 
 def __init__(self, original_username, *args,**kwargs):
     super().__init__(*args,**kwargs)

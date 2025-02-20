@@ -20,10 +20,9 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')), # Include core app URLs at the root
-    path('soil_app/', include('soil_app.urls')), # Example prefix for soil analyzer
-    path('crop_app/', include('crop_app.urls')), # Example prefix for crop weed & disease detection
+    # path('soil/', include('soil.urls')), # Example prefix for soil analyzer
+    # path('crop/', include('crop.urls')), # Example prefix for crop weed & disease detection
     path('users/', include('users.urls')), 
-    path('api/', include('api.urls')),     
-    path('weather/', include('weather.urls')),
-    path('core/', include('core.urls')),
+    # path('api/', include('api.urls')),     
+    # path('weather/', include('weather.urls')),
 ]
